@@ -31,6 +31,6 @@ func New(log *slog.Logger, server config.GRPCServer, p config.Postgres) *App {
 
 	chatService := service.NewChatService(log, storage)
 	messageService := service.NewMessageService(log, storage)
-	grpcApp := grpcapp.New(log, server, chatService, messageService)
+	grpcApp := grpcapp.New(log, server, *chatService, messageService)
 	return &App{GRPCServer: grpcApp}
 }

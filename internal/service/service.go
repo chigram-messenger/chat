@@ -1,6 +1,7 @@
 package service
 
 import (
+	"chat/internal/domain"
 	"log/slog"
 )
 
@@ -8,6 +9,7 @@ type Storage interface {
 	CreateChat(idSender, idReceiver int64) error
 	GetChatId(idUser1, idUser2 int64) (int64, error)
 	CreateMessage(idChat, idSender int64, message string) error
+	GetAllChatsByID(id int64) ([]domain.Chat, error)
 }
 
 type MessageService struct {

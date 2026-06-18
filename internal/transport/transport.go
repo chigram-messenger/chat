@@ -22,6 +22,6 @@ type ChatServer struct {
 
 func Register(s *grpc.Server, chatSrv service.ChatService, messageSrv MessageService) {
 	message.RegisterMessageServer(s, &MessageServer{serv: messageSrv})
-	chat.RegisterChatServer(s, ChatServer{serv: chatSrv})
+	chat.RegisterChatServer(s, &ChatServer{serv: chatSrv})
 
 }

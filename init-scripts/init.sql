@@ -1,5 +1,6 @@
 CREATE TABLE chats(
     id SERIAL PRIMARY KEY,
+    type VARCHAR(20),
     id_user_1 INTEGER,
     id_user_2 INTEGER
 );

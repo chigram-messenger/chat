@@ -17,9 +17,9 @@ type App struct {
 	port       int64
 }
 
-func New(log *slog.Logger, server config.GRPCServer, chatService *service.ChatService, messageService *service.MessageService) *App {
+func New(log *slog.Logger, server config.GRPCServer, chatService service.ChatService, messageService *service.MessageService) *App {
 	s := grpc.NewServer()
-	transport.Register(s, *chatService, messageService)
+	transport.Register(s, chatService, messageService)
 	return &App{
 		GRPCServer: s,
 		port:       server.Port,
