@@ -1,6 +1,6 @@
 env: local
 postgres:
-  host: "127.0.0.1"
+  host: "postgres-chat"
   port: 5432
   user: "user"
   db_name: "chat"

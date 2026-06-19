@@ -38,3 +38,7 @@ func (s *ChatService) GetAllByID(id int64) ([]domain.ChatInfo, error) {
 	return chatsInfo, nil
 
 }
+
+func (s *ChatService) GetMessagesByChatId(usersId []int64) {
+	
+}

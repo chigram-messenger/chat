@@ -23,3 +23,8 @@ func (s *ChatServer) GetAllByID(ctx context.Context, r *chat.GetAllByIDRequest) 
 
 	return &chat.GetAllByIDResponse{Chats: chatsResp}, nil
 }
+
+//func (s *ChatServer) Get(r *chat.GetRequest) (*chat.GetResponse, error) {
+//	users_id := r.GetUserId()
+//	s.serv.GetMessagesByChatId()
+//}
